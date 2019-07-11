@@ -39,6 +39,13 @@ message Message {
 }
  
 
+message Commitment_paylod {
+    required Identity_Key identity_key =1;
+    repeated Salted_hash salted_hash = 2;
+    repeated Communication_key communication_key =3;
+    required Identity_Signature identity_signature = 4;
+    }
+
 message Encrypted_proof {
     required bytes encrypted_proof = 1;
     }
