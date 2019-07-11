@@ -35,7 +35,8 @@ message Message {
     repeated Encrypted_Proof encrypted_proof =7 ;
     repeated Identity_Signature identity_signature = 8;
     repeated Salted_Hash salted_hash = 9;
-    optional Private_Key private_key= 10;
+    optional Player_order player_order = 10;
+    optional Private_Key private_key= 11;
 }
  
 
