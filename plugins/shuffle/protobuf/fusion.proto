@@ -39,7 +39,7 @@ message Message {
 }
  
 
-message Commitment_paylod {
+message Commitment_payload {
     required Identity_Key identity_key =1;
     repeated Salted_hash salted_hash = 2;
     repeated Communication_key communication_key =3;
