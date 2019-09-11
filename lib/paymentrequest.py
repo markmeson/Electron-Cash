@@ -348,6 +348,7 @@ def make_unsigned_request(req):
     if payment_url:
         pd.payment_url = payment_url
     pr = pb2.PaymentRequest()
+    pr.payment_details_version = 1
     pr.serialized_payment_details = pd.SerializeToString()
     pr.signature = util.to_bytes('')
     return pr
