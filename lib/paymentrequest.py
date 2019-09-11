@@ -348,6 +348,7 @@ def make_unsigned_request(req):
     if payment_url:
         pd.payment_url = payment_url
     pr = pb2.PaymentRequest()
+    
     # Note: We explicitly set this again here to 1 (default was already 1).
     # The reason we need to do this is because __setattr__ for this class
     # will trigger the Serialization to be 4 bytes of this field, rather than 2,
@@ -360,6 +361,7 @@ def make_unsigned_request(req):
     # rejection.  This workaround is likely needed due to bugs in the protobuf.js
     # library.
     pr.payment_details_version = int(pr.payment_details_version)
+    
     pr.serialized_payment_details = pd.SerializeToString()
     pr.signature = util.to_bytes('')
     return pr
