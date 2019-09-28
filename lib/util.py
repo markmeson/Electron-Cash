@@ -432,8 +432,7 @@ def to_bytes(something, encoding='utf8'):
 
 
 bfh = bytes.fromhex
-#hfu = binascii.hexlify
-hfu = binascii.b2a_hex
+hfu = binascii.hexlify
 
 def bh2u(x):
     """
