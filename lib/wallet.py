@@ -1846,7 +1846,7 @@ class Abstract_Wallet(PrintError, SPVDelegate):
             new_index = last_index + 1
             with open(os.path.join(path, (prefix + (str)(new_index))), 'wb') as new_payment:
                 new_payment.write(payment.SerializeToString())
-            print(new_index)
+            print_error(new_index)
             return True
 
     def create_ack(self, requestid, payment_index, config, memo):

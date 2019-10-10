@@ -373,7 +373,7 @@ def get_payment(paymentfile):
       p.ParseFromString(f.read())
       f.close()
     except IOError:
-      print (paymentfile + ": Could not open payment file")
+      util.print_error(paymentfile + ": Could not open payment file")
     return p
 
 def create_payment_ack(paymentfile, memo):
